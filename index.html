@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darian Robert — Software Engineer</title>
+<meta name="description" content="Darian Robert — Software Engineer. Computer vision, machine learning, systems and full-stack projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="#top" class="nav-name">Darian Robert</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#stack">Stack</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-reveal>Software Engineer</p>
+    <h1 class="hero-name" data-reveal>Darian<br>Robert</h1>
+    <div class="hero-rule" aria-hidden="true"></div>
+    <p class="hero-desc" data-reveal>
+      Building systems that see, decide, and ship —
+      across computer vision pipelines, machine learning models,
+      and full-stack applications.
+    </p>
+    <div class="hero-actions" data-reveal>
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>About</div>
+    <div class="about-grid">
+      <h2 class="section-heading" data-reveal>
+        Engineering rigor<br>across every layer.
+      </h2>
+      <div class="about-text">
+        <p data-reveal>
+          I'm a software engineer drawn to problems with more than one layer.
+          A vision pipeline that has to survive bad lighting and a cluttered background.
+          A model that reasons about motion over time rather than a single frame.
+          A game loop that stays responsive at sixty frames per second.
+        </p>
+        <p data-reveal>
+          My instinct is to break a system into phases, measure each one, and not
+          trust a result I can't explain. That shows up across everything I build —
+          from deep learning pipelines to C++ game engines built from a blank window up.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Projects</div>
+    <h2 class="section-heading" data-reveal>Selected Work</h2>
+
+    <div class="projects-list">
+
+      <!-- PROJECT 1 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">01</span>
+            <span class="project-title">Human Action Recognition</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">TensorFlow · Keras · LSTM</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <p class="project-desc">
+              An end-to-end pipeline for classifying complex temporal human movements from
+              raw video. Combines CNN-based spatial feature extraction with LSTM sequence
+              modelling — the system learns from how a motion unfolds over time, not just
+              what a single frame looks like. The core challenge was structuring
+              high-dimensional sequential data so the temporal signal didn't get washed out,
+              then tuning a deep network that was actually optimizing for the right thing.
+            </p>
+            <ul class="project-stack">
+              <li>TensorFlow</li><li>Keras</li><li>LSTM</li><li>CNN</li><li>Video / Temporal Data</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://colab.research.google.com/drive/1CzVgAz_3Qms_ooVPg3m3AFhzFX277JsP" target="_blank" rel="noopener noreferrer">Open Notebook →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">02</span>
+            <span class="project-title">SA Banknote Recognition</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">Python · OpenCV · SIFT</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <p class="project-desc">
+              A scale- and rotation-invariant computer vision pipeline classifying South
+              African banknotes against cluttered, highly textured backgrounds. Built a
+              custom sequential optimization framework that benchmarked candidate algorithms
+              through a data-isolated ablation study across three phases: preprocessing
+              (CLAHE, bilateral filtering, Gaussian blur), segmentation (boundary isolation
+              and geometric normalization with strict protection against color-data leakage),
+              and classification (SIFT with FLANN, ORB, AKAZE, and 3D HSV histograms
+              compared head-to-head).
+            </p>
+            <ul class="project-stack">
+              <li>Python</li><li>OpenCV</li><li>NumPy</li><li>Scikit-Learn</li><li>SIFT / ORB / AKAZE</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/ArjunRamphal/COMP702Project" target="_blank" rel="noopener noreferrer">View Repository →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">03</span>
+            <span class="project-title">DnD Trading Point of Sale</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">Full-Stack · Web · POS</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <p class="project-desc">
+              A point-of-sale system built for DnD Trading and General Supplies, covering
+              both the in-store transaction system and the accompanying customer-facing
+              website. Built for real day-to-day sales operations — inventory management,
+              transactions, and a usable storefront working together in a live business
+              environment rather than a classroom mock-up.
+            </p>
+            <ul class="project-stack">
+              <li>Point of Sale</li><li>Full-Stack</li><li>Web</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/DarianDD20/DnD-Trading" target="_blank" rel="noopener noreferrer">View System →</a>
+              <a href="https://github.com/DarianDD20/DnD-Trading-Website" target="_blank" rel="noopener noreferrer">View Website →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">04</span>
+            <span class="project-title">Dungeon Descent</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">C++ · SFML · Game Dev</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <p class="project-desc">
+              A C++ dungeon-crawling game built with SFML from a blank window up — animated
+              menus, cinematic intro sequences, an interactive dialogue system, and real-time
+              gameplay mechanics set in a fantasy world. No engine scaffolding to lean on:
+              the render loop, state management, and input handling are all hand-built.
+            </p>
+            <ul class="project-stack">
+              <li>C++</li><li>SFML</li><li>Game Architecture</li><li>Real-Time Systems</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/ArjunRamphal/Dungeon_Descent" target="_blank" rel="noopener noreferrer">View Repository →</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="section section-alt" id="stack">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Stack</div>
+    <h2 class="section-heading" data-reveal>Tools &amp; Technologies</h2>
+    <div class="stack-grid">
+      <div class="stack-col" data-reveal>
+        <h3>Languages</h3>
+        <ul><li>Python</li><li>C++</li><li>JavaScript</li><li>SQL</li></ul>
+      </div>
+      <div class="stack-col" data-reveal>
+        <h3>ML &amp; Computer Vision</h3>
+        <ul><li>TensorFlow</li><li>Keras</li><li>OpenCV</li><li>Scikit-Learn</li><li>NumPy</li></ul>
+      </div>
+      <div class="stack-col" data-reveal>
+        <h3>Systems &amp; Tools</h3>
+        <ul><li>SFML</li><li>Git</li><li>Google Colab</li><li>Jupyter</li></ul>
+      </div>
+      <div class="stack-col" data-reveal>
+        <h3>Practices</h3>
+        <ul><li>Ablation Studies</li><li>Pipeline Design</li><li>Full-Stack Dev</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Contact</div>
+    <h2 class="section-heading contact-heading" data-reveal>
+      Open to new<br>opportunities.
+    </h2>
+    <p class="contact-sub" data-reveal>
+      Available for roles in software engineering, machine learning, and computer vision.
+    </p>
+    <div class="contact-links" data-reveal>
+      <a href="https://github.com/DarianRobert" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-value">github.com/DarianRobert →</span>
+      </a>
+      <a href="https://www.linkedin.com/in/darian-robert-1322462a3/" target="_blank" rel="noopener noreferrer" class="contact-link">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">linkedin.com/in/darian-robert →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span>Darian Robert</span>
+    <span id="footerYear"></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
