@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darian Robert | Software Engineer</title>
+<meta name="description" content="Darian Robert — Software Engineer. Computer vision, machine learning, ontology, and full-stack projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav class="nav" id="mainNav">
+  <a href="#top" class="nav-name">Darian Robert</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#stack">Stack</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#stack">Stack</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-reveal>Software Engineer</p>
+    <h1 class="hero-name">
+      <span class="hero-word" aria-label="Darian Robert">
+        <span class="char">D</span><span class="char">a</span><span class="char">r</span><span class="char">i</span><span class="char">a</span><span class="char">n</span>
+        <br>
+        <span class="char">R</span><span class="char">o</span><span class="char">b</span><span class="char">e</span><span class="char">r</span><span class="char">t</span>
+      </span>
+    </h1>
+    <div class="hero-rule" aria-hidden="true"></div>
+    <p class="hero-desc" data-reveal>
+      Building systems that see, decide, and ship
+      across computer vision pipelines, machine learning models,
+      knowledge engineering, and full-stack applications.
+    </p>
+    <div class="hero-actions" data-reveal>
+      <a href="#projects" class="btn-primary magnetic">View Projects</a>
+      <a href="#contact" class="btn-ghost magnetic">Get in Touch</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+  <div class="hero-counter" aria-hidden="true">
+    <span class="hero-counter-num">06</span>
+    <span class="hero-counter-label">Projects</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-dark" id="about">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>About</div>
+    <div class="about-grid">
+      <h2 class="section-heading" data-reveal>
+        Building things that<br>actually work.
+      </h2>
+      <div class="about-text">
+        <p data-reveal>
+          I'm a final-year Computer Science student at the University of KwaZulu-Natal, currently completing my Honours degree with an aggregate above 80%. I have a strong passion for computer science and software development, and I gravitate towards projects where the problem is genuinely hard, not just technically involved.
+        </p>
+        <p data-reveal>
+          My work spans machine learning, computer vision, knowledge engineering, systems programming, and full-stack development. Whether it is a CV pipeline that has to survive real-world noise, a formal ontology that must be both mathematically sound and machine-queryable, or a game engine built from a blank window up, I approach each problem the same way: break it into measurable phases, test each one carefully, and do not accept a result I cannot explain.
+        </p>
+        <div class="about-stats" data-reveal>
+          <div class="stat">
+            <span class="stat-num">06</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">80%+</span>
+            <span class="stat-label">Honours Aggregate</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Projects</div>
+    <h2 class="section-heading" data-reveal>Selected Work</h2>
+
+    <div class="projects-list">
+
+      <!-- PROJECT 1 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">01</span>
+            <span class="project-title">Human Action Recognition</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">TensorFlow · Keras · LSTM</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <div class="project-layout">
+              <div class="project-text-col">
+                <p class="project-desc">
+                  An end-to-end pipeline for classifying complex temporal human movements from
+                  raw video. Combines CNN-based spatial feature extraction with LSTM sequence
+                  modelling so the system learns from how a motion unfolds over time, not just
+                  what a single frame looks like. The core challenge was structuring
+                  high-dimensional sequential data so the temporal signal did not get washed out,
+                  then tuning a deep network that was actually optimising for the right thing.
+                </p>
+                <ul class="project-stack">
+                  <li>TensorFlow</li><li>Keras</li><li>LSTM</li><li>CNN</li><li>Video / Temporal Data</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://colab.research.google.com/drive/1CzVgAz_3Qms_ooVPg3m3AFhzFX277JsP" target="_blank" rel="noopener noreferrer" class="magnetic-sm">Open Notebook</a>
+                </div>
+              </div>
+              <div class="project-img-col">
+                <div class="project-img-wrap">
+                  <img src="images/HumanActionRecognition.png" alt="Human Action Recognition project" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 2 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">02</span>
+            <span class="project-title">SA Banknote Recognition</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">Python · OpenCV · SIFT</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <div class="project-layout">
+              <div class="project-text-col">
+                <p class="project-desc">
+                  A scale and rotation-invariant computer vision pipeline classifying South
+                  African banknotes against cluttered, highly textured backgrounds. Built a
+                  custom sequential optimisation framework that benchmarked candidate algorithms
+                  through a data-isolated ablation study across three phases: preprocessing
+                  (CLAHE, bilateral filtering, Gaussian blur), segmentation (boundary isolation
+                  and geometric normalisation with strict protection against colour-data leakage),
+                  and classification (SIFT with FLANN, ORB, AKAZE, and 3D HSV histograms
+                  compared head-to-head).
+                </p>
+                <ul class="project-stack">
+                  <li>Python</li><li>OpenCV</li><li>NumPy</li><li>Scikit-Learn</li><li>SIFT / ORB / AKAZE</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/ArjunRamphal/COMP702Project" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
+                </div>
+              </div>
+              <div class="project-img-col">
+                <div class="project-img-wrap">
+                  <img src="images/SABanknote.png" alt="SA Banknote Recognition project" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 3 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">03</span>
+            <span class="project-title">Cloud Security Ontology</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">OWL · SPARQL · HermiT</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <div class="project-layout">
+              <div class="project-text-col">
+                <p class="project-desc">
+                  A formal, machine-readable knowledge model establishing a shared semantic
+                  vocabulary for human analysts and automated reasoning engines. Formalises
+                  logical and mathematical relationships between cloud assets, vulnerabilities,
+                  threat actors, security controls, and compliance frameworks across IaaS,
+                  PaaS, and SaaS environments. Features over 60 logically defined classes,
+                  automated reasoning via HermiT to dynamically classify individuals, and
+                  threat and compliance mapping grounded in NIST SP 800-series, CSA CCM, and
+                  MITRE ATT&amp;CK for Cloud. All structural relationships are translated into
+                  First-Order Logic and Description Logic for mathematical soundness.
+                </p>
+                <ul class="project-stack">
+                  <li>OWL / RDF-XML</li><li>Protege 5.6.9</li><li>HermiT 1.4.3</li><li>SPARQL</li><li>OntoGraf</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/ArjunRamphal/CloudSecurityOntology" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
+                </div>
+              </div>
+              <div class="project-img-col">
+                <div class="project-img-wrap">
+                  <img src="images/CSO.png" alt="Cloud Security Ontology project" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 4 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">04</span>
+            <span class="project-title">Campus Lab Space Optimiser</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">Python · Greedy · Hill Climbing</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <div class="project-layout">
+              <div class="project-text-col">
+                <p class="project-desc">
+                  Solves the university lab allocation problem: assigning modules with varying
+                  enrolment sizes and software requirements to a limited pool of computer labs,
+                  minimising total unused seats. Uses a two-stage optimisation approach where a
+                  Greedy Algorithm generates a fast, feasible baseline solution respecting
+                  capacity and software compatibility constraints, then Hill Climbing Local
+                  Search iteratively improves it. Loads real lab and module data from text
+                  files, validates all constraints, and measures execution time for both stages.
+                  Built entirely on Python's standard library.
+                </p>
+                <ul class="project-stack">
+                  <li>Python</li><li>Greedy Algorithm</li><li>Hill Climbing</li><li>Optimisation</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/ArjunRamphal/CampusLabSpaceOptimizer" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
+                </div>
+              </div>
+              <div class="project-img-col">
+                <div class="project-img-wrap">
+                  <img src="images/Optimisation.png" alt="Campus Lab Optimiser project" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 5 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">05</span>
+            <span class="project-title">DnD Trading Point of Sale</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">Full-Stack · Web · POS</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <div class="project-layout">
+              <div class="project-text-col">
+                <p class="project-desc">
+                  A point-of-sale system built for DnD Trading and General Supplies, covering
+                  both the in-store transaction system and the accompanying customer-facing
+                  website. Built for real day-to-day sales operations with inventory management,
+                  transactions, and a usable storefront working together in a live business
+                  environment rather than a classroom mock-up.
+                </p>
+                <ul class="project-stack">
+                  <li>Point of Sale</li><li>Full-Stack</li><li>Web</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/DarianDD20/DnD-Trading" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View System</a>
+                  <a href="https://github.com/DarianDD20/DnD-Trading-Website" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Website</a>
+                </div>
+              </div>
+              <div class="project-img-col">
+                <div class="project-img-wrap">
+                  <img src="images/POSSystem.png" alt="DnD Trading POS project" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PROJECT 6 -->
+      <article class="project" data-reveal>
+        <button class="project-head" aria-expanded="false">
+          <div class="project-head-left">
+            <span class="project-index">06</span>
+            <span class="project-title">Dungeon Descent</span>
+          </div>
+          <div class="project-head-right">
+            <span class="project-tags-inline">C++ · SFML · Game Dev</span>
+            <span class="project-plus" aria-hidden="true"></span>
+          </div>
+        </button>
+        <div class="project-body">
+          <div class="project-body-inner">
+            <div class="project-layout">
+              <div class="project-text-col">
+                <p class="project-desc">
+                  A C++ dungeon-crawling game built with SFML from a blank window up, featuring
+                  animated menus, cinematic intro sequences, an interactive dialogue system, and
+                  real-time gameplay mechanics set in a fantasy world. No engine scaffolding to
+                  lean on: the render loop, state management, and input handling are all
+                  hand-built from scratch.
+                </p>
+                <ul class="project-stack">
+                  <li>C++</li><li>SFML</li><li>Game Architecture</li><li>Real-Time Systems</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/ArjunRamphal/Dungeon_Descent" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
+                </div>
+              </div>
+              <div class="project-img-col">
+                <div class="project-img-wrap">
+                  <img src="images/DungeonDescent.png" alt="Dungeon Descent game" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="section section-dark" id="stack">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Stack</div>
+    <h2 class="section-heading" data-reveal>Tools &amp; Technologies</h2>
+    <div class="stack-grid">
+
+      <div class="stack-col" data-reveal>
+        <h3>Languages</h3>
+        <ul>
+          <li data-stagger data-tip="Primary language for ML, CV, and data pipelines. Used across the majority of projects.">Python</li>
+          <li data-stagger data-tip="Used for systems-level programming and game development, including the Dungeon Descent engine.">C++</li>
+          <li data-stagger data-tip="Used for front-end development and interactive web applications.">JavaScript</li>
+          <li data-stagger data-tip="Used for database design, querying, and data modelling in full-stack systems.">SQL</li>
+          <li data-stagger data-tip="OWL for building formal ontologies; SPARQL for querying RDF knowledge graphs.">OWL / SPARQL</li>
+        </ul>
+      </div>
+
+      <div class="stack-col" data-reveal>
+        <h3>ML &amp; Computer Vision</h3>
+        <ul>
+          <li data-stagger data-tip="Deep learning framework used to build and train neural network architectures including CNNs and LSTMs.">TensorFlow</li>
+          <li data-stagger data-tip="High-level neural networks API built on TensorFlow, used for rapid model design and training.">Keras</li>
+          <li data-stagger data-tip="Computer vision library used for image preprocessing, feature extraction, and classification pipelines.">OpenCV</li>
+          <li data-stagger data-tip="Machine learning library used for classical algorithms, evaluation metrics, and ablation study pipelines.">Scikit-Learn</li>
+          <li data-stagger data-tip="Core numerical computing library used for array operations, matrix algebra, and data manipulation.">NumPy</li>
+        </ul>
+      </div>
+
+      <div class="stack-col" data-reveal>
+        <h3>Systems &amp; Tools</h3>
+        <ul>
+          <li data-stagger data-tip="C++ multimedia library used to build the full game loop, rendering, input, and audio for Dungeon Descent.">SFML</li>
+          <li data-stagger data-tip="Ontology editor used to design and visualise the Cloud Security Ontology, including OWL class hierarchies.">Protege</li>
+          <li data-stagger data-tip="Version control system used across all projects for source management and collaboration.">Git</li>
+          <li data-stagger data-tip="Cloud notebook environment used for running and sharing ML experiments with GPU acceleration.">Google Colab</li>
+          <li data-stagger data-tip="Interactive computing environment used for data exploration, model prototyping, and visualisation.">Jupyter</li>
+        </ul>
+      </div>
+
+      <div class="stack-col" data-reveal>
+        <h3>Practices</h3>
+        <ul>
+          <li data-stagger data-tip="Systematic method of isolating and testing individual components of a pipeline to identify what drives performance.">Ablation Studies</li>
+          <li data-stagger data-tip="Designing formal knowledge models using OWL, Description Logic, and semantic reasoning engines.">Ontology Engineering</li>
+          <li data-stagger data-tip="Structuring complex processes into modular, testable stages from data ingestion through to output.">Pipeline Design</li>
+          <li data-stagger data-tip="Applying greedy and local search algorithms to find optimal solutions under real-world constraints.">Combinatorial Optimisation</li>
+          <li data-stagger data-tip="Building complete web applications spanning back-end logic, database integration, and front-end interfaces.">Full-Stack Dev</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STACK TOOLTIP (single shared element) -->
+<div class="stack-tooltip" id="stackTooltip" aria-hidden="true"></div>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-inner">
+    <div class="section-label" data-reveal>Contact</div>
+    <h2 class="section-heading contact-heading" data-reveal>
+      Open to new<br>opportunities.
+    </h2>
+    <p class="contact-sub" data-reveal>
+      Available for roles in software engineering, machine learning, and computer vision.
+    </p>
+    <div class="contact-links" data-reveal>
+      <a href="https://github.com/DarianRobert" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-sm">
+        <span class="contact-link-label">GitHub</span>
+        <span class="contact-link-value">github.com/DarianRobert</span>
+      </a>
+      <a href="https://www.linkedin.com/in/darian-robert-1322462a3/" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-sm">
+        <span class="contact-link-label">LinkedIn</span>
+        <span class="contact-link-value">linkedin.com/in/darian-robert</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span>Darian Robert</span>
+    <span id="footerYear"></span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
