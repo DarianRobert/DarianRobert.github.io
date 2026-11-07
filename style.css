@@ -848,3 +848,9 @@ body.cursor-click .cursor-ring {
   .about-stats { gap: 1.5rem; }
   .project-head { padding: 1.4rem 0 1.4rem 1rem; }
 }
+
+/* Preserve chart labels at desktop and mobile sizes. */
+.project-img-wrap--contain { aspect-ratio: 4 / 3; background: #fff; }
+.project-img-wrap--contain img { object-fit: contain; }
+.project-img-wrap--contain:hover img { transform: none; }
+
