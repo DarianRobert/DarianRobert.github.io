@@ -1,554 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darian Robert | Software Engineer</title>
-<meta name="description" content="Darian Robert — Software Engineer. Computer vision, machine learning, ontology, and full-stack projects.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#193e35">
+  <title>Darian Robert | Graduate Developer</title>
+  <meta name="description" content="Darian Robert is a Computer Science graduate completing Honours at UKZN in Durban. Explore C#/.NET applications, Python research, and the person behind the work.">
+  <link rel="canonical" href="https://darianrobert.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Darian Robert | Graduate Developer">
+  <meta property="og:description" content="Practical software. Curious thinking. C#/.NET applications, Python research, team leadership and tutoring.">
+  <meta property="og:url" content="https://darianrobert.github.io/">
+  <meta property="og:image" content="https://darianrobert.github.io/images/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Darian Robert. Graduate developer. Software, research and clear communication.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Darian Robert","url":"https://darianrobert.github.io/","description":"Computer Science graduate completing Honours at the University of KwaZulu-Natal, with project experience in C#/.NET development and Python research.","sameAs":["https://github.com/DarianRobert","https://www.linkedin.com/in/darian-robert-1322462a3/"],"alumniOf":{"@type":"CollegeOrUniversity","name":"University of KwaZulu-Natal"}}
+  </script>
 </head>
 <body>
-
-<!-- CUSTOM CURSOR -->
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
-
-<!-- SCROLL PROGRESS -->
-<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
-
-<!-- NAV -->
-<nav class="nav" id="mainNav">
-  <a href="#top" class="nav-name">Darian Robert</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="nav-burger" id="navBurger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span>
-  </button>
-</nav>
-
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about">About</a>
-  <a href="#projects">Projects</a>
-  <a href="#stack">Stack</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<!-- HERO -->
-<section class="hero" id="top">
-  <canvas class="hero-canvas" id="heroCanvas" aria-hidden="true"></canvas>
-  <div class="hero-content">
-    <p class="hero-eyebrow" data-reveal>Software Engineer</p>
-    <h1 class="hero-name">
-      <span class="hero-word" aria-label="Darian Robert">
-        <span class="char">D</span><span class="char">a</span><span class="char">r</span><span class="char">i</span><span class="char">a</span><span class="char">n</span>
-        <br>
-        <span class="char">R</span><span class="char">o</span><span class="char">b</span><span class="char">e</span><span class="char">r</span><span class="char">t</span>
-      </span>
-    </h1>
-    <div class="hero-rule" aria-hidden="true"></div>
-    <p class="hero-desc" data-reveal>
-      Building systems that see, decide, and ship
-      across computer vision pipelines, machine learning models,
-      knowledge engineering, and full-stack applications.
-    </p>
-    <div class="hero-actions" data-reveal>
-      <a href="#projects" class="btn-primary magnetic">View Projects</a>
-      <a href="#contact" class="btn-ghost magnetic">Get in Touch</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Darian Robert, home"><span class="brand-mark" aria-hidden="true">dr.</span><span>Darian Robert</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav" hidden>Menu <span class="menu-icon" aria-hidden="true"></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a>
+        <a href="resume.html">Résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+        <a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+      </nav>
     </div>
-  </div>
-  <div class="hero-scroll" aria-hidden="true">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
-  </div>
-  <div class="hero-counter" aria-hidden="true">
-    <span class="hero-counter-num">08</span>
-    <span class="hero-counter-label">Projects</span>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="section section-dark" id="about">
-  <div class="section-inner">
-    <div class="section-label" data-reveal>About</div>
-    <div class="about-grid">
-      <h2 class="section-heading" data-reveal>
-        Building things that<br>actually work.
-      </h2>
-      <div class="about-text">
-        <p data-reveal>
-          I'm a final-year Computer Science student at the University of KwaZulu-Natal, currently completing my Honours degree with an aggregate above 80%. I have a strong passion for computer science and software development, and I gravitate towards projects where the problem is genuinely hard, not just technically involved.
-        </p>
-        <p data-reveal>
-          My work spans machine learning, computer vision, knowledge engineering, systems programming, and full-stack development. Whether it is a CV pipeline that has to survive real-world noise, a formal ontology that must be both mathematically sound and machine-queryable, or a game engine built from a blank window up, I approach each problem the same way: break it into measurable phases, test each one carefully, and do not accept a result I cannot explain.
-        </p>
-        <div class="about-stats" data-reveal>
-          <div class="stat">
-            <span class="stat-num">08</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">80%+</span>
-            <span class="stat-label">Honours Aggregate</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">5+</span>
-            <span class="stat-label">Languages</span>
-          </div>
-        </div>
+  </header>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Open to graduate &amp; junior developer roles</p>
+        <p class="hero-intro">Hi, I'm Darian.</p>
+        <h1 id="hero-title">Practical software.<br><em>Curious thinking.</em></h1>
+        <p class="hero-description">I'm a Computer Science graduate completing Honours at UKZN. I build with C#/.NET and Python, with work spanning business applications, computer vision and applied machine learning.</p>
+        <div class="hero-actions"><a class="button" href="#work">Explore my work <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 5 19 19M5 19h14V5"/></svg></span></a><a class="text-link" href="resume.html">View my résumé <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div>
+        <p class="hero-location"><span aria-hidden="true">◎</span> Durban, South Africa <span aria-hidden="true">·</span> University of KwaZulu-Natal</p>
       </div>
-    </div>
-  </div>
-</section>
+      <aside class="profile-panel" aria-label="My work at a glance">
+        <div class="panel-topline"><span>A little about my work</span><span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></div>
+        <div class="profile-monogram" aria-hidden="true">dr<span>.</span></div>
+        <div class="panel-disciplines"><p>Software.<br>Research.<br><em>People.</em></p><span class="panel-asterisk" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M32 3v58M3 32h58M11 11l42 42M11 53 53 11"/></svg></span></div>
+        <div class="panel-bottom"><span>C# / .NET &amp; Python</span><span>Built through collaboration</span></div>
+        <div class="qualification-note"><span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span><div><strong>BSc Computer Science</strong><small>Graduated cum laude · 2025</small></div></div>
+      </aside>
+    </section>
+    <div class="intro-strip"><div class="container strip-inner"><span>A foundation in <strong>software development</strong></span><span>A focus on <strong>careful research</strong></span><span>Experience in <strong>leading &amp; explaining</strong></span></div></div>
 
-<!-- PROJECTS -->
-<section class="section" id="projects">
-  <div class="section-inner">
-    <div class="section-label" data-reveal>Projects</div>
-    <h2 class="section-heading" data-reveal>Selected Work</h2>
-
-    <div class="projects-list">
-
-      <!-- PROJECT 1 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">01</span>
-            <span class="project-title">Human Action Recognition</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">TensorFlow · Keras · LSTM</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  An end-to-end pipeline for classifying complex temporal human movements from
-                  raw video. Combines CNN-based spatial feature extraction with LSTM sequence
-                  modelling so the system learns from how a motion unfolds over time, not just
-                  what a single frame looks like. The core challenge was structuring
-                  high-dimensional sequential data so the temporal signal did not get washed out,
-                  then tuning a deep network that was actually optimising for the right thing.
-                </p>
-                <ul class="project-stack">
-                  <li>TensorFlow</li><li>Keras</li><li>LSTM</li><li>CNN</li><li>Video / Temporal Data</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/Human-Action-Recognition" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
-                  <a href="https://colab.research.google.com/drive/1CzVgAz_3Qms_ooVPg3m3AFhzFX277JsP" target="_blank" rel="noopener noreferrer" class="magnetic-sm">Open Notebook</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/HumanActionRecognition.png" alt="Human Action Recognition project" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 2 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">02</span>
-            <span class="project-title">SA Banknote Recognition</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">Python · OpenCV · SIFT</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  A scale and rotation-invariant computer vision pipeline classifying South
-                  African banknotes against cluttered, highly textured backgrounds. Built a
-                  custom sequential optimisation framework that benchmarked candidate algorithms
-                  through a data-isolated ablation study across three phases: preprocessing
-                  (CLAHE, bilateral filtering, Gaussian blur), segmentation (boundary isolation
-                  and geometric normalisation with strict protection against colour-data leakage),
-                  and classification (SIFT with FLANN, ORB, AKAZE, and 3D HSV histograms
-                  compared head-to-head).
-                </p>
-                <ul class="project-stack">
-                  <li>Python</li><li>OpenCV</li><li>NumPy</li><li>Scikit-Learn</li><li>SIFT / ORB / AKAZE</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/SA-Banknote-Recognition" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/SABanknote.png" alt="SA Banknote Recognition project" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 3 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">03</span>
-            <span class="project-title">Cloud Security Ontology</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">OWL · SPARQL · HermiT</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  A formal, machine-readable knowledge model establishing a shared semantic
-                  vocabulary for human analysts and automated reasoning engines. Formalises
-                  logical and mathematical relationships between cloud assets, vulnerabilities,
-                  threat actors, security controls, and compliance frameworks across IaaS,
-                  PaaS, and SaaS environments. Features over 60 logically defined classes,
-                  automated reasoning via HermiT to dynamically classify individuals, and
-                  threat and compliance mapping grounded in NIST SP 800-series, CSA CCM, and
-                  MITRE ATT&amp;CK for Cloud. All structural relationships are translated into
-                  First-Order Logic and Description Logic for mathematical soundness.
-                </p>
-                <ul class="project-stack">
-                  <li>OWL / RDF-XML</li><li>Protege 5.6.9</li><li>HermiT 1.4.3</li><li>SPARQL</li><li>OntoGraf</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/Cloud-Security-Ontology" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/CSO.png" alt="Cloud Security Ontology project" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 4 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">04</span>
-            <span class="project-title">Campus Lab Space Optimiser</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">Python · Greedy · Hill Climbing</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  Solves the university lab allocation problem: assigning modules with varying
-                  enrolment sizes and software requirements to a limited pool of computer labs,
-                  minimising total unused seats. Uses a two-stage optimisation approach where a
-                  Greedy Algorithm generates a fast, feasible baseline solution respecting
-                  capacity and software compatibility constraints, then Hill Climbing Local
-                  Search iteratively improves it. Loads real lab and module data from text
-                  files, validates all constraints, and measures execution time for both stages.
-                  Built entirely on Python's standard library.
-                </p>
-                <ul class="project-stack">
-                  <li>Python</li><li>Greedy Algorithm</li><li>Hill Climbing</li><li>Optimisation</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/Campus-Lab-Space-Optimiser" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/Optimisation.png" alt="Campus Lab Optimiser project" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 5 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">05</span>
-            <span class="project-title">DnD Trading Point of Sale</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">Full-Stack · Web · POS</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  A point-of-sale system built for DnD Trading and General Supplies, covering
-                  both the in-store transaction system and the accompanying customer-facing
-                  website. Built for real day-to-day sales operations with inventory management,
-                  transactions, and a usable storefront working together in a live business
-                  environment rather than a classroom mock-up.
-                </p>
-                <ul class="project-stack">
-                  <li>Point of Sale</li><li>Full-Stack</li><li>Web</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/DnD-Trading" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View System</a>
-                  <a href="https://github.com/DarianRobert/DnD-Trading-Website" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Website</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/POSSystem.png" alt="DnD Trading POS project" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 6 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">06</span>
-            <span class="project-title">Dungeon Descent</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">C++ · SFML · Game Dev</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  A C++ dungeon-crawling game built with SFML from a blank window up, featuring
-                  animated menus, cinematic intro sequences, an interactive dialogue system, and
-                  real-time gameplay mechanics set in a fantasy world. No engine scaffolding to
-                  lean on: the render loop, state management, and input handling are all
-                  hand-built from scratch.
-                </p>
-                <ul class="project-stack">
-                  <li>C++</li><li>SFML</li><li>Game Architecture</li><li>Real-Time Systems</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/Dungeon-Descent" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/DungeonDescent.png" alt="Dungeon Descent game" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-
-      <!-- PROJECT 7 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">07</span>
-            <span class="project-title">Cardiovascular Disease Classification</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">Python · scikit-learn · SHAP</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  A team machine-learning study comparing Decision Trees, SVM and ensembles
-                  for classifying cardiovascular disease status. The pipeline combines data
-                  cleaning, feature selection, cross-validation and SHAP explanations.
-                  The selected Soft Voting ensemble achieved 73.45% held-out accuracy and
-                  a 0.7935 ROC-AUC in the submitted report. My contribution covered
-                  exploratory data analysis, the literature review and report writing.
-                </p>
-                <ul class="project-stack">
-                  <li>Python</li><li>scikit-learn</li><li>Pandas</li><li>SHAP</li><li>Google Colab</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/Cardiovascular-Disease-Classification" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Repository</a>
-                  <a href="https://colab.research.google.com/github/DarianRobert/Cardiovascular-Disease-Classification/blob/main/notebooks/COMP721_Project.ipynb" target="_blank" rel="noopener noreferrer" class="magnetic-sm">Open Notebook</a>
-                  <a href="https://github.com/DarianRobert/Cardiovascular-Disease-Classification/blob/main/report/Cardiovascular_Disease_Report.pdf" target="_blank" rel="noopener noreferrer" class="magnetic-sm">Read Report</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap project-img-wrap--contain">
-                  <img src="images/CardiovascularDiseaseROC.png" alt="ROC curves comparing the Decision Tree, SVM and Soft Voting cardiovascular classifiers" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 8 -->
-      <article class="project" data-reveal>
-        <button class="project-head" aria-expanded="false">
-          <div class="project-head-left">
-            <span class="project-index">08</span>
-            <span class="project-title">Soil Moisture Monitoring</span>
-          </div>
-          <div class="project-head-right">
-            <span class="project-tags-inline">Arduino · Raspberry Pi · Flask</span>
-            <span class="project-plus" aria-hidden="true"></span>
-          </div>
-        </button>
-        <div class="project-body">
-          <div class="project-body-inner">
-            <div class="project-layout">
-              <div class="project-text-col">
-                <p class="project-desc">
-                  A team IoT prototype connecting a Grove moisture probe, Arduino Uno and
-                  Raspberry Pi 5. A Flask dashboard displays live readings, dry-soil
-                  warnings and watering history, while recorded trial curves estimate
-                  water quantities for a selected target. Water is added manually and
-                  the response is recorded. The repository contains the project report,
-                  architecture diagrams and prototype screenshots.
-                </p>
-                <ul class="project-stack">
-                  <li>Arduino Uno</li><li>Raspberry Pi 5</li><li>Python</li><li>Flask</li><li>SQLite</li><li>Project Documentation</li>
-                </ul>
-                <div class="project-links">
-                  <a href="https://github.com/DarianRobert/Soil-Moisture-Monitoring" target="_blank" rel="noopener noreferrer" class="magnetic-sm">View Project</a>
-                  <a href="https://github.com/DarianRobert/Soil-Moisture-Monitoring/blob/main/report/Soil_Moisture_Report.pdf" target="_blank" rel="noopener noreferrer" class="magnetic-sm">Read Report</a>
-                </div>
-              </div>
-              <div class="project-img-col">
-                <div class="project-img-wrap">
-                  <img src="images/SoilMoisturePrototype.jpeg" alt="Soil-moisture prototype with the probe, Arduino Uno and Raspberry Pi 5" loading="lazy">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- STACK -->
-<section class="section section-dark" id="stack">
-  <div class="section-inner">
-    <div class="section-label" data-reveal>Stack</div>
-    <h2 class="section-heading" data-reveal>Tools &amp; Technologies</h2>
-    <div class="stack-grid">
-
-      <div class="stack-col" data-reveal>
-        <h3>Languages</h3>
-        <ul>
-          <li data-stagger data-tip="Primary language for ML, CV, and data pipelines. Used across the majority of projects.">Python</li>
-          <li data-stagger data-tip="Used for systems-level programming and game development, including the Dungeon Descent engine.">C++</li>
-          <li data-stagger data-tip="Used for front-end development and interactive web applications.">JavaScript</li>
-          <li data-stagger data-tip="Used for database design, querying, and data modelling in full-stack systems.">SQL</li>
-          <li data-stagger data-tip="OWL for building formal ontologies; SPARQL for querying RDF knowledge graphs.">OWL / SPARQL</li>
-        </ul>
+    <section class="section container about-section" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><p class="eyebrow">01 / The person behind the work</p><h2 id="about-title">More than a<br><em>technology stack.</em></h2></div>
+      <div class="about-copy">
+        <p class="lead">My experience connects building software, investigating ideas and helping people understand them.</p>
+        <p>At the University of KwaZulu-Natal, I've worked with teams on business applications, a dungeon game and research projects in machine learning and computer vision. That range has given me practice moving between practical requirements and technical detail.</p>
+        <p>As the DnD Trading team leader, I coordinated weekly goals and project timelines while contributing to development. As a mathematics and science tutor, I spent two years breaking down difficult concepts for high school students.</p>
+        <p>Those experiences shape what I bring to a graduate role: a strong academic foundation, experience working with others, and the ability to explain technical ideas clearly.</p>
+        <a class="text-link" href="#background">Read my background <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></span></a>
       </div>
+    </section>
 
-      <div class="stack-col" data-reveal>
-        <h3>ML &amp; Computer Vision</h3>
-        <ul>
-          <li data-stagger data-tip="Deep learning framework used to build and train neural network architectures including CNNs and LSTMs.">TensorFlow</li>
-          <li data-stagger data-tip="High-level neural networks API built on TensorFlow, used for rapid model design and training.">Keras</li>
-          <li data-stagger data-tip="Computer vision library used for image preprocessing, feature extraction, and classification pipelines.">OpenCV</li>
-          <li data-stagger data-tip="Machine learning library used for classical algorithms, evaluation metrics, and ablation study pipelines.">Scikit-Learn</li>
-          <li data-stagger data-tip="Core numerical computing library used for array operations, matrix algebra, and data manipulation.">NumPy</li>
-        </ul>
+    <section class="section work-section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-heading heading-row"><div><p class="eyebrow">02 / Selected work</p><h2 id="work-title">Ideas, put<br><em>into practice.</em></h2></div><p class="section-intro">From business workflows to research questions. Here's what we built, why it matters, and where I contributed.</p></div>
+        <p class="team-note">These are university team projects. Each repository links to my GitHub copy, with original team credits and history preserved.</p>
+        <div class="work-toolbar" id="work-toolbar" hidden>
+          <div class="filter-list" role="group" aria-label="Filter projects">
+            <button type="button" data-filter="all" aria-pressed="true">All work <span>9</span></button>
+            <button type="button" data-filter="software" aria-pressed="false">Software</button>
+            <button type="button" data-filter="ml" aria-pressed="false">ML &amp; vision</button>
+            <button type="button" data-filter="systems" aria-pressed="false">Algorithms &amp; systems</button>
+          </div>
+          <p id="filter-count" role="status" aria-live="polite" aria-atomic="true">Showing 9 projects</p>
+        </div>
+        <div class="featured-projects" id="featured-projects">
+          <article class="project-feature" data-category="software" aria-labelledby="dnd-title">
+            <div class="project-visual dnd-visual" role="img" aria-label="DnD Trading architecture overview: desktop and web interfaces, C# application logic and SQL Server data.">
+              <div class="visual-caption"><span>Application structure</span><span>01</span></div>
+              <div class="architecture-interfaces"><div><span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="14" rx="1"/><path d="M12 17v4m-5 0h10M3 7h18"/></svg></span><strong>Desktop</strong><small>Windows Forms</small></div><b aria-hidden="true">+</b><div><span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 8h18M6 6h1m2 0h1m2 0h1M7 12h10M7 16h6"/></svg></span><strong>Web</strong><small>ASP.NET Web Forms</small></div></div>
+              <div class="architecture-line"></div>
+              <div class="architecture-layer"><strong>C# / .NET Framework</strong><small>Customers · Products · Orders · Payments</small></div>
+              <div class="architecture-line"></div>
+              <div class="architecture-database">SQL Server</div>
+              <div class="visual-footnote">Two interfaces. A shared business context.</div>
+            </div>
+            <div class="project-content">
+              <p class="project-kicker"><span>Software development</span> Team project · 2025</p>
+              <h3 id="dnd-title">DnD Trading</h3><p class="project-subtitle">Business management, from desktop to web.</p>
+              <p>A desktop application and companion website for a stationery distribution business, bringing customer, product, order and payment workflows together.</p>
+              <div class="contribution"><strong>My contribution</strong><p>Team leader and project manager. I coordinated weekly development goals and timelines, and contributed to frontend and backend development.</p></div>
+              <ul class="tags" aria-label="Technologies"><li>C#</li><li>.NET Framework</li><li>Windows Forms</li><li>ASP.NET</li><li>SQL Server</li></ul>
+              <details class="project-details"><summary>Inside the project <span aria-hidden="true">+</span></summary><div><p>The desktop application includes customer and supplier management, order entry, payments and Crystal Reports. The website provides a companion web interface.</p><p><strong>What this demonstrates:</strong> working across interfaces, application logic and data access while coordinating a development team.</p><p class="detail-note">The repositories contain the team's source. Running the applications requires Windows, database configuration and the documented dependencies.</p></div></details>
+              <div class="project-links"><a href="https://github.com/DarianRobert/DnD-Trading" target="_blank" rel="noopener noreferrer">Desktop repository <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/DarianRobert/DnD-Trading-Website" target="_blank" rel="noopener noreferrer">Website repository <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+            </div>
+          </article>
+          <article class="project-feature" data-category="ml" aria-labelledby="smart-title">
+            <div class="project-visual research-visual" role="img" aria-label="Honours research. Ten known IoT appliance classes, 376 held-out observations. Selected CNN-BiLSTM accuracy: 82.713 percent. Tuned Random Forest accuracy: 83.511 percent.">
+              <div class="visual-caption"><span>Honours research / COMP700</span><span>02</span></div>
+              <div class="research-heading">What can network traffic<br>tell us about a device?</div>
+              <div class="research-input"><span>INPUT</span> Engineered traffic features</div>
+              <div class="research-results"><div><span>Selected CNN-BiLSTM</span><strong>82.713<small>%</small></strong></div><div><span>Tuned Random Forest</span><strong>83.511<small>%</small></strong></div></div>
+              <div class="research-meta"><span><strong>10</strong> known device classes</span><span><strong>376</strong> held-out observations</span></div>
+              <div class="visual-footnote">Selected-model held-out accuracy · project results</div>
+            </div>
+            <div class="project-content">
+              <p class="project-kicker"><span>Machine learning research</span> Honours team research · 2026</p>
+              <h3 id="smart-title">Smart Home Appliance Identification</h3><p class="project-subtitle">Evaluating models beyond a headline score.</p>
+              <p>Our Honours research identifies ten known IoT device types from engineered network-traffic features, comparing neural models with a Random Forest baseline.</p>
+              <div class="contribution"><strong>Research focus</strong><p>The team study combines dataset auditing, model comparison, SHAP explanations and prepared-input inference profiling on x86_64 and ARM64.</p></div>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>TensorFlow / Keras</li><li>scikit-learn</li><li>SHAP</li><li>LiteRT</li></ul>
+              <details class="project-details"><summary>Inside the research <span aria-hidden="true">+</span></summary><div><p>The workflow reconstructs a fixed training, validation and test split, fits preprocessing on training data, and selects neural models using validation evidence. It compares predictive performance alongside model size and inference cost.</p><p><strong>A useful finding:</strong> the tuned Random Forest outperformed the selected neural models on held-out accuracy. The strongest neural score alone does not tell the whole story.</p><p class="detail-note">This is closed-set classification using engineered features. Profiling measures prepared-input inference, rather than a live packet-capture or end-to-end gateway system.</p></div></details>
+              <div class="project-links"><a href="https://github.com/DarianRobert/Smart-Home-Appliance-Identification" target="_blank" rel="noopener noreferrer">View research <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a href="https://github.com/DarianRobert/Smart-Home-Appliance-Identification/blob/master/thesis/COMP700_Thesis.pdf" target="_blank" rel="noopener noreferrer">Read thesis <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+            </div>
+          </article>
+          <article class="project-feature" data-category="ml" aria-labelledby="banknote-title">
+            <figure class="project-visual banknote-visual">
+              <div class="visual-caption"><span>Computer vision / COMP702</span><span>03</span></div>
+              <div class="banknote-image"><img src="images/banknote-sample.jpg" width="440" height="440" alt="R10 banknote against a textured background, from the project's test image set" loading="lazy"></div>
+              <div class="pipeline-labels"><span>Preprocess</span><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></b><span>Segment</span><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h16m-7-7 7 7-7 7"/></svg></b><span>Match</span></div>
+              <figcaption class="visual-footnote">Actual test image · SA Banknote Recognition repository</figcaption>
+            </figure>
+            <div class="project-content">
+              <p class="project-kicker"><span>Computer vision</span> Team project · 2026</p>
+              <h3 id="banknote-title">SA Banknote Recognition</h3><p class="project-subtitle">Finding the signal in a cluttered image.</p>
+              <p>A computer vision pipeline for recognising five South African banknote denominations across changes in scale, rotation and textured backgrounds.</p>
+              <div class="contribution"><strong>My contribution</strong><p>I contributed to developing the team's recognition model. The pipeline and comparative experiments are shared work by our four-person team.</p></div>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>OpenCV</li><li>NumPy</li><li>SIFT / ORB / AKAZE</li></ul>
+              <details class="project-details"><summary>Inside the pipeline <span aria-hidden="true">+</span></summary><div><p>The team compared preprocessing and segmentation methods, then evaluated SIFT, ORB and AKAZE feature matching alongside colour histograms.</p><p><strong>What this demonstrates:</strong> breaking a recognition problem into testable stages and comparing the effect of different methods.</p></div></details>
+              <div class="project-links"><a href="https://github.com/DarianRobert/SA-Banknote-Recognition" target="_blank" rel="noopener noreferrer">View repository <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+            </div>
+          </article>
+        </div>
+        <div class="more-work" id="more-work">
+          <div class="more-work-heading"><h3>More to explore</h3><p>A broader look at my university project work.</p></div>
+          <div class="project-grid" id="project-grid">
+            <article class="project-card" data-category="ml" aria-labelledby="action-title">
+              <div class="card-top"><span>ML &amp; vision</span><span>04</span></div><h4 id="action-title">Human Action Recognition</h4>
+              <p>Comparing recurrent, transformer and state-space models for six actions in KTH video clips, using MobileNetV2 features.</p>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>PyTorch</li><li>OpenCV</li><li>Optuna</li></ul>
+              <details class="project-details"><summary>My part &amp; project context <span aria-hidden="true">+</span></summary><div><p>I contributed to developing the team's action-recognition model. The shared pipeline uses subject-separated data to help prevent leakage. The final notebook evaluation uses the validation split; the report provides the experimental context.</p></div></details>
+              <a class="card-link" href="https://github.com/DarianRobert/Human-Action-Recognition" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </article>
+            <article class="project-card" data-category="ml" aria-labelledby="cardio-title">
+              <div class="card-top"><span>Machine learning</span><span>05</span></div><h4 id="cardio-title">Cardiovascular Disease Classification</h4>
+              <p>A comparative study of Decision Trees, SVM and ensembles, with feature selection, cross-validation and SHAP explanations.</p>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>scikit-learn</li><li>Pandas</li><li>SHAP</li></ul>
+              <details class="project-details"><summary>My part &amp; project context <span aria-hidden="true">+</span></summary><div><p>My contribution covered exploratory data analysis, the literature review and report writing. The team's selected Soft Voting ensemble achieved 73.45% held-out accuracy and 0.7935 ROC-AUC in the submitted report. This is an academic classification study.</p><figure class="detail-figure"><img src="images/CardiovascularDiseaseROC.png" width="784" height="584" alt="Reported ROC curves comparing Decision Tree, SVM and Soft Voting classifiers" loading="lazy"><figcaption>ROC comparison from the team report.</figcaption></figure></div></details>
+              <a class="card-link" href="https://github.com/DarianRobert/Cardiovascular-Disease-Classification" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </article>
+            <article class="project-card" data-category="systems" aria-labelledby="lab-title">
+              <div class="card-top"><span>Optimisation</span><span>06</span></div><h4 id="lab-title">Campus Lab Space Optimiser</h4>
+              <p>Allocating university labs while respecting capacity and software requirements, using a greedy baseline followed by hill climbing.</p>
+              <ul class="tags" aria-label="Technologies"><li>Python</li><li>Greedy algorithms</li><li>Local search</li></ul>
+              <details class="project-details"><summary>Project context <span aria-hidden="true">+</span></summary><div><p>A shared team project exploring constrained allocation. The two-stage approach starts with a feasible allocation, then searches for improvements. The repository presents the team's implementation and report.</p></div></details>
+              <a class="card-link" href="https://github.com/DarianRobert/Campus-Lab-Space-Optimiser" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </article>
+            <article class="project-card" data-category="software" aria-labelledby="dungeon-title">
+              <div class="card-top"><span>Game development</span><span>07</span></div><h4 id="dungeon-title">Dungeon Descent</h4>
+              <p>A Windows dungeon game with character classes, battles, exploration and story choices, combining C++ gameplay with a graphical interface.</p>
+              <ul class="tags" aria-label="Technologies"><li>C++ / CLI</li><li>Windows Forms</li><li>SFML</li></ul>
+              <details class="project-details"><summary>My part &amp; project context <span aria-hidden="true">+</span></summary><div><p>I contributed to developing the game as part of the university project team. It combines character and room class hierarchies, gameplay systems, Windows Forms and SFML graphics/audio. The repository retains the team's original history and author list.</p></div></details>
+              <a class="card-link" href="https://github.com/DarianRobert/Dungeon-Descent" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </article>
+            <article class="project-card" data-category="systems" aria-labelledby="ontology-title">
+              <div class="card-top"><span>Knowledge representation</span><span>08</span></div><h4 id="ontology-title">Cloud Security Ontology</h4>
+              <p>A queryable knowledge model connecting cloud assets, threats, controls and compliance concepts through formal relationships.</p>
+              <ul class="tags" aria-label="Technologies"><li>OWL / RDF</li><li>SPARQL</li><li>Protégé</li><li>HermiT</li></ul>
+              <details class="project-details"><summary>My part &amp; project context <span aria-hidden="true">+</span></summary><div><p>I contributed to designing the team's formal knowledge model. The shared ontology uses automated reasoning and queries to explore relationships between cloud assets, vulnerabilities, threat actors, security controls and compliance frameworks.</p></div></details>
+              <a class="card-link" href="https://github.com/DarianRobert/Cloud-Security-Ontology" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </article>
+            <article class="project-card" data-category="systems" aria-labelledby="soil-title">
+              <div class="card-top"><span>IoT · Documentation</span><span>09</span></div><h4 id="soil-title">Soil Moisture Monitoring</h4>
+              <p>A team IoT prototype connecting a moisture sensor, Arduino and Raspberry Pi to a Flask dashboard for readings and watering history.</p>
+              <ul class="tags" aria-label="Technologies"><li>Arduino</li><li>Raspberry Pi</li><li>Flask</li><li>SQLite</li></ul>
+              <details class="project-details"><summary>Project context <span aria-hidden="true">+</span></summary><div><p>The prototype uses manually added water and recorded trial curves for water-quantity guidance. The repository contains the team's report, diagrams and prototype results; implementation source is not included.</p><figure class="detail-figure"><img src="images/SoilMoisturePrototype.jpeg" width="1280" height="720" alt="Team prototype connecting a soil probe, Arduino Uno and Raspberry Pi 5" loading="lazy"><figcaption>The team's soil-monitoring prototype.</figcaption></figure></div></details>
+              <a class="card-link" href="https://github.com/DarianRobert/Soil-Moisture-Monitoring" target="_blank" rel="noopener noreferrer">View documentation <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
+            </article>
+          </div>
+        </div>
+        <a class="text-link all-github-link" href="https://github.com/DarianRobert" target="_blank" rel="noopener noreferrer">Explore my GitHub <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>
       </div>
+    </section>
 
-      <div class="stack-col" data-reveal>
-        <h3>Systems &amp; Tools</h3>
-        <ul>
-          <li data-stagger data-tip="C++ multimedia library used to build the full game loop, rendering, input, and audio for Dungeon Descent.">SFML</li>
-          <li data-stagger data-tip="Ontology editor used to design and visualise the Cloud Security Ontology, including OWL class hierarchies.">Protege</li>
-          <li data-stagger data-tip="Version control system used across all projects for source management and collaboration.">Git</li>
-          <li data-stagger data-tip="Cloud notebook environment used for running and sharing ML experiments with GPU acceleration.">Google Colab</li>
-          <li data-stagger data-tip="Interactive computing environment used for data exploration, model prototyping, and visualisation.">Jupyter</li>
-        </ul>
+    <section class="section skills-section" id="skills" aria-labelledby="skills-title"><div class="container">
+      <div class="section-heading heading-row"><div><p class="eyebrow">03 / What I bring</p><h2 id="skills-title">A foundation to<br><em>build on.</em></h2></div><p class="section-intro">Project experience across application development and research, backed by working in teams and explaining ideas.</p></div>
+      <div class="capability-grid">
+        <article class="capability"><span class="capability-index">01 / Build</span><h3>Application development</h3><p>Connecting interfaces, business logic and data. My strongest software example is DnD Trading, where I contributed across frontend and backend development.</p><ul class="skill-list"><li>C# / .NET Framework</li><li>Windows Forms · ASP.NET Web Forms</li><li>SQL Server · ADO.NET</li></ul><a class="text-link" href="#dnd-title">See DnD Trading <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></article>
+        <article class="capability"><span class="capability-index">02 / Investigate</span><h3>Data &amp; applied research</h3><p>Working with data, comparing methods and interpreting results. My projects span image processing, sequence models, explainability and optimisation.</p><ul class="skill-list"><li>Python · NumPy · Pandas</li><li>TensorFlow / Keras · PyTorch</li><li>scikit-learn · OpenCV · SHAP</li></ul><a class="text-link" href="#smart-title">See Honours research <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></article>
+        <article class="capability"><span class="capability-index">03 / Work together</span><h3>Coordination &amp; communication</h3><p>Keeping a team moving towards shared goals and making difficult concepts easier to understand, through project leadership and mathematics and science tutoring.</p><ul class="skill-list"><li>Weekly goals &amp; project timelines</li><li>Research &amp; technical writing</li><li>Explaining ideas to different audiences</li></ul><a class="text-link" href="#background">See my experience <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></article>
       </div>
+      <div class="tools-row"><span>Also in my toolkit</span><p>Java <b>·</b> C++ <b>·</b> JavaScript <b>·</b> Git <b>·</b> Linux <b>·</b> Visual Studio / VS Code <b>·</b> OWL &amp; SPARQL</p></div>
+    </div></section>
 
-      <div class="stack-col" data-reveal>
-        <h3>Practices</h3>
-        <ul>
-          <li data-stagger data-tip="Systematic method of isolating and testing individual components of a pipeline to identify what drives performance.">Ablation Studies</li>
-          <li data-stagger data-tip="Designing formal knowledge models using OWL, Description Logic, and semantic reasoning engines.">Ontology Engineering</li>
-          <li data-stagger data-tip="Structuring complex processes into modular, testable stages from data ingestion through to output.">Pipeline Design</li>
-          <li data-stagger data-tip="Applying greedy and local search algorithms to find optimal solutions under real-world constraints.">Combinatorial Optimisation</li>
-          <li data-stagger data-tip="Building complete web applications spanning back-end logic, database integration, and front-end interfaces.">Full-Stack Dev</li>
-        </ul>
+    <section class="section container background-section" id="background" aria-labelledby="background-title">
+      <div class="section-heading"><p class="eyebrow">04 / Background</p><h2 id="background-title">Learning, leading<br><em>and explaining.</em></h2><a class="text-link" href="resume.html">View my résumé <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div>
+      <div class="timeline">
+        <article class="timeline-item"><div class="timeline-meta"><span>2026 · In progress</span><span>Education</span></div><h3>Computer Science Honours</h3><p class="timeline-place">University of KwaZulu-Natal</p><p>Advanced study in artificial intelligence, computer vision, machine learning, optimisation and knowledge representation, alongside research into IoT appliance identification.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>Graduated 2025</span><span>Education</span></div><h3>BSc Computer Science <span class="honour-label">Cum laude</span></h3><p class="timeline-place">University of KwaZulu-Natal</p><p>A foundation in programming, data structures, algorithms, databases, networking and software development. Awarded Dean's Commendation and module Certificates of Merit.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>2025</span><span>Project leadership</span></div><h3>Team Leader &amp; Project Manager</h3><p class="timeline-place">DnD Trading · University team project</p><p>Coordinated weekly meetings, development goals and project timelines while contributing to the team's application and website.</p></article>
+        <article class="timeline-item"><div class="timeline-meta"><span>Jan 2024 – Dec 2025</span><span>Work experience</span></div><h3>Mathematics &amp; Science Tutor</h3><p class="timeline-place">Montclair Tuition Center · Durban</p><p>Tutored Grade 8–12 learners in mathematics, physics, biology and chemistry, explaining challenging concepts and supporting their understanding.</p></article>
       </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- STACK TOOLTIP (single shared element) -->
-<div class="stack-tooltip" id="stackTooltip" aria-hidden="true"></div>
-
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="section-inner">
-    <div class="section-label" data-reveal>Contact</div>
-    <h2 class="section-heading contact-heading" data-reveal>
-      Open to new<br>opportunities.
-    </h2>
-    <p class="contact-sub" data-reveal>
-      Available for roles in software engineering, machine learning, and computer vision.
-    </p>
-    <div class="contact-links" data-reveal>
-      <a href="https://github.com/DarianRobert" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-sm">
-        <span class="contact-link-label">GitHub</span>
-        <span class="contact-link-value">github.com/DarianRobert</span>
-      </a>
-      <a href="https://www.linkedin.com/in/darian-robert-1322462a3/" target="_blank" rel="noopener noreferrer" class="contact-link magnetic-sm">
-        <span class="contact-link-label">LinkedIn</span>
-        <span class="contact-link-value">linkedin.com/in/darian-robert</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-    <span>Darian Robert</span>
-    <span id="footerYear"></span>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-grid">
+      <div><p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Looking for my next chapter</p><h2 id="contact-title">Let's build<br><em>what comes next.</em></h2><p>I'm looking for a graduate or junior developer opportunity where I can contribute, learn from experienced people and grow through practical work.</p><a class="button" href="mailto:darianrobert2005@gmail.com">Get in touch <span aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a></div>
+      <div class="contact-links"><a href="mailto:darianrobert2005@gmail.com"><span>Email</span><strong>darianrobert2005@gmail.com</strong><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></b></a><a href="https://www.linkedin.com/in/darian-robert-1322462a3/" target="_blank" rel="noopener noreferrer"><span>Connect</span><strong>LinkedIn</strong><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></b></a><a href="https://github.com/DarianRobert" target="_blank" rel="noopener noreferrer"><span>Explore</span><strong>GitHub / DarianRobert</strong><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></b></a><a href="resume.html"><span>Background</span><strong>View my résumé</strong><b aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></b></a></div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-name" href="#top">Darian Robert<span>.</span></a><span>Durban, South Africa · <span id="footer-year">2026</span></span><a href="#top">Back to top <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20V4m-7 7 7-7 7 7"/></svg></a></div></footer>
 </body>
 </html>
-
