@@ -51,9 +51,9 @@
           else visibleSections.delete(entry.target.id);
         });
         const visible = Array.from(visibleSections.values()).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-        if (!visible.length) return;
+        const activeSection = visible[0]?.target.id;
         sectionLinks.forEach((link) => {
-          if (link.hash === '#' + visible[0].target.id) link.setAttribute('aria-current', 'location');
+          if (link.hash === '#' + activeSection) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
         });
       }, { rootMargin: '-12% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });

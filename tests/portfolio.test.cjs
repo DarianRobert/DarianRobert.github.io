@@ -96,6 +96,9 @@ test('navigation remembers visible sections omitted from an observer update', ()
     assert.equal(document.querySelector('#main-nav [aria-current="location"]'), links[0]);
     notify([entry(0, 0)]);
     assert.equal(document.querySelector('#main-nav [aria-current="location"]'), links[1]);
+    // Returning to the introduction must not leave the previous section highlighted.
+    notify([entry(1, 0)]);
+    assert.equal(document.querySelector('#main-nav [aria-current="location"]'), null);
   } finally { dom.window.close(); }
 });
 

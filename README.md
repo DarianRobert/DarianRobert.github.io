@@ -6,6 +6,8 @@ Source for my [portfolio](https://darianrobert.github.io/), hosted on GitHub Pag
 
 Semantic HTML, responsive CSS and progressive-enhancement JavaScript. No framework, package installation or build step is required.
 
+The desktop layout expands to 1,480px, with larger text and more space inside project panels. Project summaries use two columns on laptops and three from 1,600px; phones keep a single column. Long paragraphs and the printable résumé retain their own reading widths.
+
 | Path | Purpose |
 | --- | --- |
 | `index.html` | Introduction, About, nine project groups, skills, background and contact |
@@ -27,6 +29,8 @@ python -m http.server 8000
 Open `http://localhost:8000` in your browser. Stop the server with Ctrl+C. Google Fonts requires an internet connection; CSS provides fallback fonts. Content, repository links and project disclosures remain available without JavaScript.
 
 ## Updating content
+
+The CSS and JavaScript links in both HTML pages include a content version. Refresh those version strings when changing the assets so returning visitors receive the update.
 
 - Edit project articles in `index.html`. Set `data-category` to `software`, `ml` or `systems` for filtering. JavaScript calculates the total; also update the initial all-work count and status text when changing the number of projects.
 - DnD Trading's application and website form one project group. Nine groups link to ten project repositories.
