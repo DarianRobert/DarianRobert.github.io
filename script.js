@@ -43,14 +43,20 @@
 
     if ('IntersectionObserver' in window) {
       const sectionLinks = Array.from(navigation.querySelectorAll('a[href^="#"]'));
+      const visibleSections = new Map();
       const observer = new IntersectionObserver((entries) => {
-        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+        // A callback contains changed sections, so retain the other visible sections.
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) visibleSections.set(entry.target.id, entry);
+          else visibleSections.delete(entry.target.id);
+        });
+        const visible = Array.from(visibleSections.values()).sort((a, b) => b.intersectionRatio - a.intersectionRatio);
         if (!visible.length) return;
         sectionLinks.forEach((link) => {
           if (link.hash === '#' + visible[0].target.id) link.setAttribute('aria-current', 'location');
           else link.removeAttribute('aria-current');
         });
-      }, { rootMargin: '-12% 0px -55% 0px', threshold: 0 });
+      }, { rootMargin: '-12% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
       sectionLinks.forEach((link) => {
         const section = document.getElementById(link.hash.slice(1));
         if (section) observer.observe(section);

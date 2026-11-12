@@ -40,3 +40,14 @@ Open `http://localhost:8000` in your browser. Stop the server with Ctrl+C. Googl
 Review links, keyboard navigation, the mobile menu, all four filters, expanded project details, the résumé and print layout. Check desktop and narrow-screen layouts. The site respects reduced-motion settings and uses the standard pointer.
 
 Changes pushed to `main` are published by the existing GitHub Pages workflow.
+
+## Optional JavaScript checks
+
+The site itself still needs no build step. With Node 22.22.2, 24.15.0 or newer supported by jsdom, run:
+
+```bash
+npm ci
+npm test
+```
+
+Five DOM checks cover filters, links to hidden projects, menu interactions, section highlighting and progressive controls. They use the actual HTML and script with simulated browser observer/media events; they do not check visual layout.
